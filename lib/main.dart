@@ -8,7 +8,7 @@ import 'page_animation3/page_animation.dart';
 
 //小组件
 void main() {
-  return runApp(MyApp5());
+  return runApp(MyApp1());
 }
 
 //1.简单的导航栏切换
