@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         //CircleAvatar 圆形
         new CircleAvatar(
           backgroundImage: new NetworkImage(
-              "http://d-pic-image.yesky.com/1080x-/uploadImages/2019/044/59/xiao_m_y.jpg"),
+              "http://img0.ph.126.net/WPoHgfhyqEjUG_HP2AK7ow==/6631872608210454282.jpg"),
           radius: 120.0,
           //直接设置child：Text的话,文字在容器重置居中显示
           /*child: new Container(
