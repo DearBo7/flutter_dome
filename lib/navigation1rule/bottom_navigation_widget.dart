@@ -12,23 +12,29 @@ class BottomNavigationWidget extends StatefulWidget {
 class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
   //导航栏颜色
   final _bottomNavigationColor = Colors.blue;
+  //选中的导航栏颜色
   final _selectBottomNavigationColor = Colors.purple;
 
   //当前显示索引
   int _currentIndex = 0;
 
-  List<Widget> widgetList = List();
+  List<Widget> childrenWidgetList = List();
 
   @override
   void initState() {
     super.initState();
-    widgetList..add(HomeScreen())..add(LearnScreen())..add(MyScreen());
+    childrenWidgetList..add(HomeScreen())..add(LearnScreen())..add(MyScreen());
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: widgetList[_currentIndex],
+      //IndexedStack 能保留当前不被销毁
+      /*body: IndexedStack(
+        index: _currentIndex,
+        children: childrenWidgetList,
+      ),*/
+      body: childrenWidgetList[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         items: [
