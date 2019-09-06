@@ -5,10 +5,11 @@ import 'keep_alive_single5/keep_alive_widget.dart';
 import 'nagigation2irregular/bottom_app_bar_widget.dart';
 import 'navigation1rule/bottom_navigation_widget.dart';
 import 'page_animation3/page_animation.dart';
+import 'draggable6/draggable_dome.dart';
 
 //小组件
 void main() {
-  return runApp(MyApp1());
+  return runApp(MyApp6());
 }
 
 //1.简单的导航栏切换
@@ -64,6 +65,15 @@ class MyApp5 extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.green),
       home: KeepAliveWidget(),
+    );
+  }
+}
+/// 6.可拖动的
+class MyApp6 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: DraggableDome(),
     );
   }
 }
